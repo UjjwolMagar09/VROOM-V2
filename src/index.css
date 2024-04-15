@@ -1,0 +1,131 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 0px; 
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Truck Image */
+.truck-image {
+  width: 100%;
+}
+
+.truck-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Grid */
+.car-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -8px;
+}
+
+.car-item {
+  background-color: gray;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(8, 7, 7, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  width: calc(33.333% - 16px);
+  margin: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.car-model {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.car-type {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.book-now-btn {
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+}
+
