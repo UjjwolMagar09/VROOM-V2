@@ -1,0 +1,111 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E2632C; /* Set background color for the entire page */
+}
+
+.login-main-container {
+    height: 595px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container {
+    padding: 20px;
+}
+
+.right-container {
+    padding: 20px;
+    /* Remove background-color property to inherit the body background color */
+}
+
+.login-text {
+    font-size: 35px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.input-box-container {
+    padding-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #FFFFFF; /* Set label color to white */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: transparent; /* Set input field background to transparent */
+    color: #FFFFFF; /* Set text color to white */
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.remember-me-text {
+    font-size: 14px;
+    color: #FFFFFF; /* Set text color to white */
+}
+
+.button {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+button[type="submit"] {
+    width: 150px;
+    height: 50px;
+    background-color: #33A1D0;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.last-text, .signup-txt {
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.signup-txt a {
+    color: #33A1D0;
+    text-decoration: none;
+}
+
+/* Eye icon toggle */
+.bx-low-vision {
+    cursor: pointer;
+}
+
+.bx-show::before {
+    content: '\f50a'; /* Unicode for open eye icon */
+}
+
+#password {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#password[type="text"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
