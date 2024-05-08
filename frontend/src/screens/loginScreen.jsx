@@ -7,14 +7,14 @@ import FormContainer from '../components/FormContainer';
 
 import { useLoginMutation } from '../slices/userApiSlice';
 import { setCredentials } from '../slices/authSlice';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const dispatch = useDispatch(); //redux function for hook state to trigger store.js
+  const navigate = useNavigate(); //redux function for hook state to navigate different route
 
   const [login, { isLoading }] = useLoginMutation();
 
@@ -37,7 +37,7 @@ const LoginScreen = () => {
       dispatch(setCredentials({ ...res }));
       navigate(redirect);
     } catch (err) {
-      // toast.error(err?.data?.message || err.error);
+      toast.error(err?.data?.message || err.error);
     }
   };
 
