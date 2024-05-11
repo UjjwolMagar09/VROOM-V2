@@ -1,0 +1,95 @@
+/* TestimonialSlider.css */
+
+.testimonial-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.team-header {
+  font-size: 35px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  font-size: 36px;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.navigation:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-cards-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  
+}
+
+.testimonial-details-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 45%;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #D9D9D959;
+}
+
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Preserve circular shape */
+  overflow: hidden; /* Ensure content stays within the circular shape */
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%; /* Make sure image fills the circular container */
+  object-fit: cover;
+}
+
+
+.prev {
+  left: 20px;
+  font-size: 60px;
+}
+
+.next {
+  right: 20px;
+  font-size: 60px;
+}
+
+
+.testimonial-info {
+  font-size: 16px; /* Set font size for details */
+  font-family: 'Arial', sans-serif; /* Set font family */
+  margin-top: 10px;
+  color: black;
+}
+
+.testimonial-info h3 {
+  font-size: 20px; /* Set font size for name */
+  
+}
