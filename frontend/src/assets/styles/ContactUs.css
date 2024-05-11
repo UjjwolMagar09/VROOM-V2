@@ -1,0 +1,79 @@
+.contact-us {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-us h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-us p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .contact-details {
+    margin-top: 40px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item i {
+    margin-right: 10px;
+  }
+  
+  .contact-item span {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  input[type="text"],
+input[type="email"],
+input[type="tel"]
+input[type="message"] { /* Use input[type="tel"] for phone number input */
+  width: calc(50% - 5px); /* Set the width to half of the container width */
+  padding: 10px; /* Keep the padding consistent */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  width: calc(50% - 5px); /* Full width for message textarea */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

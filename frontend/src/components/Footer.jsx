@@ -4,17 +4,18 @@ import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-sv
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faDotCircle } from '@fortawesome/free-regular-svg-icons';
 import '../assets/styles/footer.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__left">
-        <a href="#" className="footer-link help-link">HELP</a>
-        <a href="#" className="footer-link contact-us-link">Contact Us</a>
-        <a href="#" className="footer-link about-us-link">About Us</a>
-        <a href="#" className="footer-link faqs-link">FAQs</a>
-        <a href="#" className="footer-link privacy-policy-link">Privacy Policy</a>
-        <a href="#" className="footer-link terms-and-conditions-link">Terms and Conditions</a>
+      <Link to="" className="footer-link">HELP</Link>
+        <Link to="/contact" className="footer-link">Contact Us</Link>
+        <Link to="" className="footer-link">About Us</Link>
+        <Link to="" className="footer-link">FAQs</Link>
+        <Link to="" className="footer-link">Privacy Policy</Link>
+        <Link to="" className="footer-link">Terms and Conditions</Link>
       </div>
       <div className="footer__middle">
         <p className="footer__follow">FOLLOW US</p>
