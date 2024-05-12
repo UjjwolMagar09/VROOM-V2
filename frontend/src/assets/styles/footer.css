@@ -1,7 +1,3 @@
-
-
-
-
 .footer {
     width: 100%;
     max-width: 100%;
@@ -12,13 +8,13 @@
     justify-content: space-around;
     align-items: flex-start;
     box-sizing: border-box;
-    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-x: hidden; 
   }
   
   .footer__left {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Vertical spacing between links */
+    gap: 10px; 
   }
   
   .footer__left a {
@@ -39,6 +35,7 @@
   .footer__left .footer-link.help-link {
     font-size: 25px;
     width: 100px; 
+    
   }
   
   .footer__left .footer-link.contact-us-link {
@@ -87,7 +84,7 @@
   }
   
   .social-icons a .svg-inline--fa {
-    /* Customize size, color, etc. */
+    
     width: 30px;
     height: 30px;
     color: #000000;
@@ -151,23 +148,20 @@
   
   
   .contact-item .svg-inline--fa {
-    /* Customize size, color, etc. */
     width: 24px;
     height: 24px;
     color: #000000;
     font-size: 20px;
   }
   
-  /* Styling for Font Awesome regular icons */
+
   .contact-item .svg-inline--fa.fa-envelope {
-    /* Customize size, color, etc. */
     width: 20px;
     height: 15px;
     color: #000000;
     font-size: 20px;
   }
   .contact-item .svg-inline--fa.fa-phone {
-    /* Customize size, color, etc. */
     width: 18px;
     height: 20px;
     color: #000000;

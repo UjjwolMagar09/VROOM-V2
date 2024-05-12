@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/styles//ContactUs.css';
+import '../assets/styles/ContactUs.css';
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -16,9 +16,9 @@ const Contactus = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send message)
+    // Handle form submission logic 
     console.log('Form submitted:', formData);
-    // Clear form fields after submission (optional)
+    // Clear form fields after submission 
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 

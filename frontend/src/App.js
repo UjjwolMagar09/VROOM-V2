@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import TestimonialSlider from './components/TestimonialSlider';
 import Contactus from './screens/Contactus';
 import { Outlet } from 'react-router-dom';
+import PrivacyPolicy from './screens/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
         <Container>
           <Routes>
             <Route path="/contact" element={<Contactus />} />
-            {/* Add more routes here */}
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           </Routes>
           <Outlet/>
           <TestimonialSlider />

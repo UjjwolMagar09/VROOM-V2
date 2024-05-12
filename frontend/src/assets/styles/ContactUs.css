@@ -64,15 +64,15 @@
   input[type="text"],
 input[type="email"],
 input[type="tel"]
-input[type="message"] { /* Use input[type="tel"] for phone number input */
-  width: calc(50% - 5px); /* Set the width to half of the container width */
-  padding: 10px; /* Keep the padding consistent */
+input[type="message"] { 
+  width: calc(50% - 5px); 
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
 textarea {
-  width: calc(50% - 5px); /* Full width for message textarea */
+  width: calc(50% - 5px); 
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
