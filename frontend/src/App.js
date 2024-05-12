@@ -9,6 +9,7 @@ import TestimonialSlider from './components/TestimonialSlider';
 import Contactus from './screens/Contactus';
 import { Outlet } from 'react-router-dom';
 import PrivacyPolicy from './screens/PrivacyPolicy';
+import TermsAndConditions from './screens/TermsAndConditions';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/contact" element={<Contactus />} />
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandconditions" element={<TermsAndConditions/>} />
           </Routes>
           <Outlet/>
           <TestimonialSlider />
