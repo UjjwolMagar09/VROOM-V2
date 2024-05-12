@@ -2,8 +2,11 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 import Product from '../components/Product'
 import Loader from '../components/Loader'
+import SimpleCarousel from '../components/Carousel'
 import Message from '../components/Message'
 import { useGetProductsQuery } from '../slices/productApiSlice'
+
+
 
 const HomeScreen = () => {
   const {data: products, isLoading, error} = useGetProductsQuery();
@@ -21,6 +24,8 @@ const HomeScreen = () => {
           </Col> 
         ))}
       </Row></>) }
+
+      <SimpleCarousel/>
       
     </>
   )
