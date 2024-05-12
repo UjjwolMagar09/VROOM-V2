@@ -9,7 +9,21 @@ const SimpleCarousel = () => {
   return (
     <>
       <style>{`
-        .carousel-caption {
+             
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon
+        {
+         filter: invert(100%); 
+        }
+      
+        carousel-control-prev,
+        .carousel-control-next
+        {
+         color: black; /* Set the color to black */
+        }
+      
+        .carousel-caption 
+        {
           position: absolute;
           bottom: 20px; 
           left: 50%;
@@ -20,16 +34,19 @@ const SimpleCarousel = () => {
           width: 50%; 
         }
 
-        .carousel-caption h3 {
+        .carousel-caption h3
+        {
           font-size: 24px;
           margin-bottom: 10px;
         }
 
-        .carousel-caption p {
+        .carousel-caption p 
+        {
           font-size: 18px; 
         }
 
-        .carousel-inner img {
+        .carousel-inner img 
+        {
           max-height: 600px; 
           max-width: 800px;  ;
           margin: auto;
