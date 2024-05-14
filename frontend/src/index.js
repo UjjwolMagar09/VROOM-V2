@@ -19,6 +19,12 @@ import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/loginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 
+
+import Contactus from './screens/Contactus';
+
+import PrivacyPolicy from './screens/PrivacyPolicy';
+import TermsAndConditions from './screens/TermsAndConditions';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -27,6 +33,9 @@ const router = createBrowserRouter(
       <Route path='/cart' element={<CartScreen />}/>
       <Route path='/login' element={<LoginScreen />}/>
       <Route path='/register' element={<RegisterScreen />}/>
+      <Route path="/contact" element={<Contactus />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandconditions" element={<TermsAndConditions/>} />
     </Route>
   )
 )

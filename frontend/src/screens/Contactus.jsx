@@ -75,20 +75,7 @@ const Contactus = () => {
         <button type="submit">Send Message</button>
       </form>
 
-      <div className="contact-details">
-        <div className="contact-item">
-          <i className="fa-solid fa-location-dot"></i>
-          <span>Naxal, Kathmandu</span>
-        </div>
-        <div className="contact-item">
-          <i className="fa-regular fa-envelope"></i>
-          <span>VroomCarRental@gmail.com</span>
-        </div>
-        <div className="contact-item">
-          <i className="fa-solid fa-phone"></i>
-          <span>9818681223</span>
-        </div>
-      </div>
+     
     </div>
   );
 };

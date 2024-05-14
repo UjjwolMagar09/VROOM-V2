@@ -8,7 +8,7 @@ const teamMembers = [
     role: 'Project Manager',
     number: '+1234567890',
     email: 'Leeja@gmail.com',
-    photo: '../images/car1.jpg', 
+    photo: '../images/leeja.jpg', 
   },
   {
     id: 2,
