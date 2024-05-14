@@ -1,20 +1,24 @@
-import React, { useState } from 'react';
-import {Row, Col} from 'react-bootstrap'
-import Product from '../components/Product'
-import Loader from '../components/Loader'
-import SimpleCarousel from '../components/Carousel'
-import Message from '../components/Message'
+import React, { useState, useEffect } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import Product from '../components/Product';
+import Loader from '../components/Loader';
+import SimpleCarousel from '../components/Carousel';
+import Message from '../components/Message';
 import SortingComponent from '../components/Sorting';
-import { useGetProductsQuery } from '../slices/productApiSlice'
-
-
+import { useGetProductsQuery } from '../slices/productApiSlice';
 
 const HomeScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
-  const [sortedProducts, setSortedProducts] = useState(products);
+  const [sortedProducts, setSortedProducts] = useState([]);
+
+  useEffect(() => {
+    if (products) {
+      setSortedProducts([...products]); // Initialize sortedProducts with products data
+    }
+  }, [products]);
 
   const handleSort = (sortOrder) => {
-    const sorted = [...products].sort((a, b) => {
+    const sorted = [...sortedProducts].sort((a, b) => {
       if (sortOrder === 'asc') {
         return a.price - b.price;
       } else {
@@ -23,26 +27,29 @@ const HomeScreen = () => {
     });
     setSortedProducts(sorted);
   };
+
   return (
     <>
-    <SortingComponent handleSort={handleSort} />
-    {isLoading ? (
-      <Loader />
-    ) : error ? (
-      <Message variant='danger'>{error.data?.message || error.error}</Message>
-    ) : (<><h1>Our Services</h1>
-    <Row>
-  { sortedProducts.map((product) => (
-    <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-      <Product product={product} />
-    </Col> 
-  ))}
-</Row></>) }
-
-      <SimpleCarousel/>
-      
+      <SortingComponent handleSort={handleSort} />
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Message variant='danger'>{error.data?.message || error.error}</Message>
+      ) : (
+        <>
+          <h1>Our Services</h1>
+          <Row>
+            {sortedProducts.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+        </>
+      )}
+      <SimpleCarousel />
     </>
-  )
-}
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
