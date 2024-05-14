@@ -109,9 +109,13 @@ const deliverHandler = async () => {
               <strong>Email: </strong> {order.user.email}
             </p>
             <p>
-              <strong>Address: </strong>
-              {order.shippingAddress.address},{order.shippingAddress.city}{' '}
+              <strong>From Address: </strong>
+              {order.shippingAddress.address}{' '}
               {order.shippingAddress.postalCode}, {order.shippingAddress.country}
+            </p>
+            <p>
+              <strong>To Address: </strong>
+              {order.shippingAddress.city}
             </p>
             { order.isDelivered ?(
                 <Message variant='success'>
@@ -149,7 +153,7 @@ const deliverHandler = async () => {
                     </Link>
                     </Col>
                       <Col md={4}>
-                        {item.qty} x ${item.price} = Rs.{item.qty * item.price}
+                        {item.qty} x ${item.price} = ${item.qty * item.price}
                       </Col>
                   </Row>
                 </ListGroup.Item>
@@ -166,19 +170,19 @@ const deliverHandler = async () => {
             <ListGroup.Item>
               <Row>
                 <Col>Items</Col>
-                <Col>Rs. {order.itemsPrice}</Col>
+                <Col>$ {order.itemsPrice}</Col>
               </Row>
               <Row>
                 <Col>Shipping</Col>
-                <Col>Rs. {order.shippingPrice}</Col>
+                <Col>$ {order.shippingPrice}</Col>
               </Row>
               <Row>
                 <Col>Tax</Col>
-                <Col>Rs. {order.taxPrice}</Col>
+                <Col>$ {order.taxPrice}</Col>
               </Row>
               <Row>
                 <Col>Total</Col>
-                <Col>Rs. {order.totalPrice}</Col>
+                <Col>$ {order.totalPrice}</Col>
               </Row>
             </ListGroup.Item>
             { !order.isPaid && (
@@ -186,12 +190,12 @@ const deliverHandler = async () => {
                 {loadingPay && <Loader />}
                 {isPending ? <Loader /> :(
                   <div>
-                    <Button
+                    {/* <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
                       >
                         Test Pay Order
-                      </Button>
+                      </Button> */}
                     <div>
                       <PayPalButtons
                         createOrder={ createOrder }

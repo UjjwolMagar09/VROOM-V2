@@ -4,7 +4,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { Form, Row, Col, Image, ListGroup, Card, Button} from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { useGetProductDetailsQuery } from '../slices/productApiSlice';
@@ -20,7 +19,7 @@ const ProductScreen = () => {
   const { data: product, isLoading, error } = useGetProductDetailsQuery(productId);
   const addToCartHandler = () =>{
     dispatch(addToCart({...product, qty}));
-    navigate('/cart');
+    navigate('/book');
   }
   return (
     <>
@@ -42,9 +41,6 @@ const ProductScreen = () => {
             <h3>{product.name}</h3>
           </ListGroup.Item>
           <ListGroup.Item>
-            <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
-          </ListGroup.Item>
-          <ListGroup.Item>
             Price: Rs.{product.price}
           </ListGroup.Item>
           <ListGroup.Item>
@@ -58,7 +54,7 @@ const ProductScreen = () => {
             <ListGroup.Item>
               <Row>
                 <Col>
-                Price:
+                Price Per day:
                 </Col>
                 <Col>
                 <strong>Rs.{product.price}</strong>
@@ -71,7 +67,7 @@ const ProductScreen = () => {
                 Status:
                 </Col>
                 <Col>
-                <strong>{product.countInStock > 0 ?'In Stock':'Out Of Stock'}</strong>
+                <strong>{product.countInStock > 0 ?'Available':'Unavailable'}</strong>
                 </Col>
               </Row>
             </ListGroup.Item>
@@ -79,7 +75,7 @@ const ProductScreen = () => {
             {product.countInStock > 0 && (
               <ListGroup.Item>
                 <Row>
-                  <Col>Qty</Col>
+                  <Col>Days</Col>
                   <Col>
                   <Form.Control
                   as='select'
@@ -103,7 +99,7 @@ const ProductScreen = () => {
               disabled={product.countInStock === 0}
               onClick={addToCartHandler}
               >
-                Book Now
+                Rent Now
               </Button>
             </ListGroup.Item>
           </ListGroup>

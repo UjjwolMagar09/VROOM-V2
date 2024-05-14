@@ -16,7 +16,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import CartScreen from './screens/CartScreen';
+import BookScreen from './screens/BookScreen';
 import LoginScreen from './screens/loginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import PrivateRoute from './components/PrivateRoute';
@@ -29,13 +29,15 @@ import AdminRoute from './components/AdminRoute';
 import OrderListScreen from './screens/admin/OrderListScreen';
 import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
+import UserListScreen from './screens/admin/UserListSCreen';
+import UserEditScreen from './screens/admin/UserEditScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />}/>
       <Route path='/product/:id' element={<ProductScreen />}/>
-      <Route path='/cart' element={<CartScreen />}/>
+      <Route path='/book' element={<BookScreen />}/>
       <Route path='/login' element={<LoginScreen />}/>
       <Route path='/register' element={<RegisterScreen />}/>
       {/* Registered users */}
@@ -50,7 +52,9 @@ const router = createBrowserRouter(
       <Route path='' element={<AdminRoute />}>
         <Route path='/admin/orderlist' element={<OrderListScreen />} />     
         <Route path='/admin/productlist' element={<ProductListScreen />} />
+        <Route path='/admin/userlist' element={<UserListScreen />} />
         <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />   
+        <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
       </Route>
     </Route>
   )

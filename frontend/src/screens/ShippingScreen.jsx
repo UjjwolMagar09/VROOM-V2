@@ -32,7 +32,7 @@ const ShippingScreen = () => {
       <h1>Shipping</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='address'>
-          <Form.Label>Address</Form.Label>
+          <Form.Label>From Address</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter address'
@@ -43,7 +43,7 @@ const ShippingScreen = () => {
         </Form.Group>
 
         <Form.Group className='my-2' controlId='city'>
-          <Form.Label>City</Form.Label>
+          <Form.Label>To Address</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter city'
