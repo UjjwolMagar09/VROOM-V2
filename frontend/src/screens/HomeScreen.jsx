@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import SimpleCarousel from '../components/Carousel';
 import SortingComponent from '../components/Sorting';
 import { useGetProductsQuery } from '../slices/productApiSlice';
 
@@ -42,6 +43,7 @@ const HomeScreen = () => {
           </Row>
         </>
       )}
+      <SimpleCarousel/>
     </>
   );
 };
