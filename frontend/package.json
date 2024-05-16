@@ -47,5 +47,9 @@
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
-  }
+  },
+  "description": "npm run dev to start because i have changed the json file of the server that runs both backend and frontend at once using concurrently",
+  "main": "products.js",
+  "author": "",
+  "license": "ISC"
 }
