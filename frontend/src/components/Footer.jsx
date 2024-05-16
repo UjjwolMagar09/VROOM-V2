@@ -13,8 +13,8 @@ const Footer = () => {
       <div className="footer__left">
       <Link to="" className="footer-link">HELP</Link>
         <Link to="/contact" className="footer-link">Contact Us</Link>
-        <Link to="" className="footer-link">About Us</Link>
-        <Link to="" className="footer-link">FAQs</Link>
+        <Link to="/About" className="footer-link">About Us</Link>
+        <Link to="/FAQ" className="footer-link">FAQ</Link>
         <Link to="/privacypolicy" className="footer-link">Privacy Policy</Link>
         <Link to="/termsandconditions" className="footer-link">Terms and Conditions</Link>
       </div>
@@ -22,8 +22,8 @@ const Footer = () => {
         <p className="footer__follow">FOLLOW US</p>
         <div className="social-icons">
         <a href="#"><FontAwesomeIcon icon={faFacebookF} className="svg-inline--fa" /></a>
-<a href="#"><FontAwesomeIcon icon={faInstagram} className="svg-inline--fa" /></a>
-<a href="#"><FontAwesomeIcon icon={faTwitter} className="svg-inline--fa" /></a>
+        <a href="#"><FontAwesomeIcon icon={faInstagram} className="svg-inline--fa" /></a>
+        <a href="#"><FontAwesomeIcon icon={faTwitter} className="svg-inline--fa" /></a>
         </div>
       </div>
       <div className="footer__right">
