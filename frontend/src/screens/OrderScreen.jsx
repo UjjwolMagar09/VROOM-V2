@@ -140,7 +140,7 @@ const deliverHandler = async () => {
               )}
             </ListGroup.Item>
           <ListGroup.Item>
-            <h2>Order Items</h2>
+            <h2>Book car</h2>
             { order.orderItems.map((item,index)=>(
                 <ListGroup.Item key={index}>
                   <Row>
