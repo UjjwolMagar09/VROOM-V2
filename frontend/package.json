@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.3.0",
     "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -46,5 +47,9 @@
   },
   "devDependencies": {
     "react-scripts": "^5.0.1"
-  }
+  },
+  "description": "npm run dev to start because i have changed the json file of the server that runs both backend and frontend at once using concurrently",
+  "main": "products.js",
+  "author": "",
+  "license": "ISC"
 }

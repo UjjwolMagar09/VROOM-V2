@@ -7,6 +7,7 @@ import '../assets/styles/footer.css';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="footer">
       <div className="footer__left">
@@ -43,7 +44,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

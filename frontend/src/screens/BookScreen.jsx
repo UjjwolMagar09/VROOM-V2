@@ -13,7 +13,7 @@ import { FaTrash } from 'react-icons/fa';
 import Message from '../components/Message';
 import { addToCart, removeFromCart } from '../slices/cartSlice';
 
-const CartScreen = () => {
+const BookScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -34,10 +34,10 @@ const CartScreen = () => {
   return (
     <Row>
       <Col md={8}>
-        <h1 style={{ marginBottom: '20px' }}>Shopping Cart</h1>
+        <h1 style={{ marginBottom: '20px' }}>My Bookings</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to='/'>Go Back</Link>
+            Your Bookings is empty <Link to='/'>Go Back</Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -111,4 +111,4 @@ const CartScreen = () => {
   );
 };
 
-export default CartScreen;
+export default BookScreen;

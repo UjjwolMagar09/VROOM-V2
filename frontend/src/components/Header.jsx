@@ -41,8 +41,8 @@ const Header = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav'/>
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <LinkContainer to='/cart'>
-              <Nav.Link><FaShoppingCart /> Cart
+              <LinkContainer to='/book'>
+              <Nav.Link>My Bookings
               {
                 cartItems.length > 0 &&(
                   <Badge pill bg='success' style={{marginLeft:'5px'}}>
@@ -70,6 +70,28 @@ const Header = () => {
                   </Nav.Link>
                 </LinkContainer>
               )}
+              {
+                userInfo && userInfo.isAdmin && (
+                  <NavDropdown title= 'Admin' id='adminmenu'>
+                    <LinkContainer to='/admin/productList'>
+                      <NavDropdown.Item>Products</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/admin/userList'>
+                      <NavDropdown.Item>Users</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to='/admin/orderList'>
+                      <NavDropdown.Item>Orders</NavDropdown.Item>
+                    </LinkContainer>
+                  </NavDropdown>
+                )}
+                {
+                userInfo && userInfo.isDistributor && (
+                  <NavDropdown title= 'Distributor' id='distributormenu'>
+                    <LinkContainer to='/distributor/productList'>
+                      <NavDropdown.Item>Products</NavDropdown.Item>
+                    </LinkContainer>
+                  </NavDropdown>
+                )}
             </Nav>
           </Navbar.Collapse>
         </Container>
