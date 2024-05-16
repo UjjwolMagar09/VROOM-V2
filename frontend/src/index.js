@@ -34,6 +34,13 @@ import UserEditScreen from './screens/admin/UserEditScreen';
 import DistributorRoute from './components/DistributorRoute';
 import ProductListDistributorScreen from './screens/distributor/ProductListDistributorScreen';
 
+
+
+import Contactus from './screens/Contactus';
+
+import PrivacyPolicy from './screens/PrivacyPolicy';
+import TermsAndConditions from './screens/TermsAndConditions';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
@@ -42,6 +49,9 @@ const router = createBrowserRouter(
       <Route path='/book' element={<BookScreen />}/>
       <Route path='/login' element={<LoginScreen />}/>
       <Route path='/register' element={<RegisterScreen />}/>
+      <Route path="/contact" element={<Contactus />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/termsandconditions" element={<TermsAndConditions/>} />
       {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
