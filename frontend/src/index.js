@@ -39,6 +39,7 @@ import ProductListDistributorScreen from './screens/distributor/ProductListDistr
 
 import Contactus from './screens/Contactus';
 import FAQ from './screens/FAQ';
+import AboutUs from './screens/Aboutus';
 import PrivacyPolicy from './screens/PrivacyPolicy';
 import TermsAndConditions from './screens/TermsAndConditions';
 
@@ -54,6 +55,7 @@ const router = createBrowserRouter(
             <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path="/termsandconditions" element={<TermsAndConditions/>} />
             <Route path='/FAQ' element={<FAQ />}/>
+            <Route path='/About' element={<AboutUs/>}/>
       {/* Registered users */}
       <Route path='' element={<PrivateRoute />}>
         <Route path='/shipping' element={<ShippingScreen />} />
