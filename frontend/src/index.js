@@ -31,6 +31,8 @@ import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
 import UserListScreen from './screens/admin/UserListSCreen';
 import UserEditScreen from './screens/admin/UserEditScreen';
+import DistributorRoute from './components/DistributorRoute';
+import ProductListDistributorScreen from './screens/distributor/ProductListDistributorScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +57,10 @@ const router = createBrowserRouter(
         <Route path='/admin/userlist' element={<UserListScreen />} />
         <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />   
         <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
+      </Route>
+      <Route path='' element={<DistributorRoute />}>  
+        <Route path='/distributor/productlist' element={<ProductListDistributorScreen />} />
+        <Route path='/distributor/product/:id/edit' element={<ProductEditScreen />} />
       </Route>
     </Route>
   )
