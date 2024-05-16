@@ -37,6 +37,45 @@ function FAQ() {
 
   return (
     <div className="wrapper">
+         <style>
+        {`
+          .wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+          }
+          .accordion {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+          .item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+          }
+          .item:last-child {
+            border-bottom: none;
+          }
+          .title h2 {
+            display: inline-block;
+            margin: 0;
+            font-size: 16px; /* Smaller font size for questions */
+          }
+          .title span {
+            float: right;
+            font-size: 24px;
+          }
+          .content {
+            padding: 10px 0;
+            display: none;
+            font-size: 14px; /* Smaller font size for answers */
+          }
+          .item.active .content {
+            display: block;
+          }
+        `}
+      </style>
       <h1>FAQ</h1>
       <div className="accordion">
         {data.map((item, index) => (
