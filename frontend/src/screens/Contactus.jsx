@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import '../assets/styles/ContactUs.css';
 
 const Contactus = () => {
@@ -16,10 +17,18 @@ const Contactus = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic 
-    console.log('Form submitted:', formData);
-    // Clear form fields after submission 
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    // Send email using EmailJS
+    emailjs.sendForm('service_d8aeo07', 'template_3aojwck', e.target, 'pGYjMdg3Itu5o7AVs')
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        alert('Failed to send message. Please try again later.');
+      });
   };
 
   return (
@@ -74,8 +83,6 @@ const Contactus = () => {
 
         <button type="submit">Send Message</button>
       </form>
-
-     
     </div>
   );
 };
