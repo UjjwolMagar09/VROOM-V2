@@ -14,6 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "colors": "^1.4.0",
@@ -30,5 +34,13 @@
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prince220328/VROOM-V2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Prince220328/VROOM-V2/issues"
+  },
+  "homepage": "https://github.com/Prince220328/VROOM-V2#readme",
   "description": ""
 }
