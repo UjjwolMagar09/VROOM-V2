@@ -16,7 +16,7 @@ const teamMembers = [
     role: 'Business Analyst',
     number: '+9876543210',
     email: 'Sirish@gmail.com',
-    photo: '../images/car2.jpg',
+    photo: '../images/samplee.jpg',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const teamMembers = [
     role: 'Developer',
     number: '+9876543210',
     email: 'Ujjwol@gmail.com',
-    photo: '../images/car3.jpg',
+    photo: '../images/samplee.jpg',
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const teamMembers = [
     role: 'Developer',
     number: '+9876543210',
     email: 'Pralad@gmail.com',
-    photo: '../images/car5.jpg',
+    photo: '../images/samplee.jpg',
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const teamMembers = [
     role: 'Developer',
     number: '+9876543210',
     email: 'Prince@gmail.com',
-    photo: '../images/car6.jpg',
+    photo: '../images/samplee.jpg',
   },
 ];
 

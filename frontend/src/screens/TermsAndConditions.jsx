@@ -2,22 +2,7 @@ import React, { useState } from 'react';
 import '../assets/styles/TermsAndConditions.css';
 
 const TermsAndConditions = () => {
-    const [acceptedTerms, setAcceptedTerms] = useState(false);
-
-    const handleAcceptance = () => {
-      setAcceptedTerms(!acceptedTerms);
-    };
   
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      if (acceptedTerms) {
-        // Logic to handle form submission or proceed with action
-        console.log('Terms accepted. Proceeding...');
-      } else {
-        alert('Please accept the terms and conditions.');
-      }
-    };
-
 
 
   return (
@@ -68,19 +53,7 @@ const TermsAndConditions = () => {
       </section>
 
 
-         {/* Acceptance Checkbox and Button */}
-      <form onSubmit={handleSubmit} className="acceptance-form">
-        <label>
-          <input
-            type="checkbox"
-            checked={acceptedTerms}
-            onChange={handleAcceptance}
-          />
-          I accept the terms and conditions
-        </label>
-        <button type="submit">Proceed</button>
-      </form>
-
+ 
         
       </div>
     </div>
